@@ -600,71 +600,6 @@ header{
     margin-right: -10px;
     cursor: pointer;
   }
-  /* list comments */
-  .box-comments{
-    .count-comments{
-      font-family: casperregular;
-      font-style: normal;
-      margin-right: 27px;
-      background: url("../images/icon-comments-count.png") left top no-repeat;
-      width: 26px;
-      height: 25px;
-      float: left;
-      font-style: 12px;
-      color: #ededed;
-      text-align: center;
-    }
-    h3{
-      font-size: 18px;
-    }
-
-    ul{margin: 0; padding: 0;}
-    ul li{list-style: none}
-    .my_comment{
-      color: #4a84c5;
-    }
-    .ava-comment{
-      background: center center no-repeat;
-      width: 33px;
-      height: 33px;
-      overflow: hidden;
-      vertical-align: middle;
-      text-align: center;
-      @include border-radius(2px);
-      float: left;
-      margin-top: 5px;
-    }
-    .user-name{
-      font-weight: bold;
-      display: block;
-      font-size: 14px;
-
-      .data{
-        font-family: $verdana;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: normal;
-        float: right;
-      }
-    }
-    p{
-      padding-left: 54px;
-      font-size: 14px;
-    }
-
-    form{
-      textarea{
-        margin-left: 22px;
-        border: none;
-        width: 300px;
-        height: 44px;
-        margin-top: 5px;
-        @include border-radius(5px);
-        background-color: #f4f6f9;
-        @include box-shadow(0 1px #fff, inset 0 1px rgba(110,141,175,.55));
-      }
-    }
-  }
 
  /* Description order */
   .description_order{
@@ -684,6 +619,71 @@ header{
       @include box-shadow(0 1px rgba(140,170,207,.77));
       @include background-image(linear-gradient(bottom, rgba(0,0,0,.05), rgba(255,255,255,.05)));
       float: right;
+    }
+  }
+}
+/* list comments */
+.box-comments{
+  .count-comments{
+    font-family: casperregular;
+    font-style: normal;
+    margin-right: 27px;
+    background: url("../images/icon-comments-count.png") left top no-repeat;
+    width: 26px;
+    height: 25px;
+    float: left;
+    font-style: 12px;
+    color: #ededed;
+    text-align: center;
+  }
+  h3{
+    font-size: 18px;
+  }
+
+  ul{margin: 0; padding: 0;}
+  ul li{list-style: none}
+  .my_comment{
+    color: #4a84c5;
+  }
+  .ava-comment{
+    background: center center no-repeat;
+    width: 33px;
+    height: 33px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    @include border-radius(2px);
+    float: left;
+    margin-top: 5px;
+  }
+  .user-name{
+    font-weight: bold;
+    display: block;
+    font-size: 14px;
+
+    .data{
+      font-family: $verdana;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: normal;
+      float: right;
+    }
+  }
+  p{
+    padding-left: 54px;
+    font-size: 14px;
+  }
+
+  form{
+    textarea{
+      margin-left: 22px;
+      border: none;
+      width: 300px;
+      height: 44px;
+      margin-top: 5px;
+      @include border-radius(5px);
+      background-color: #f4f6f9;
+      @include box-shadow(0 1px #fff, inset 0 1px rgba(110,141,175,.55));
     }
   }
 }

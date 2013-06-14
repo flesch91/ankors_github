@@ -63,15 +63,15 @@
         padding: 5px 20px 15px 0;
         position: relative;
 
-        .time_icon {
-          background: url("../images/clock.png") 0 0 no-repeat;
-          height: 16px;
-          margin-top: -13px;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          width: 13px;
-        }
+        //.time_icon {
+        //  background: url("../images/clock.png") 0 0 no-repeat;
+        //  height: 16px;
+        //  margin-top: -13px;
+        //  position: absolute;
+        //  right: 0;
+        //  top: 50%;
+        //  width: 13px;
+        //}
       }
     }
     .search-form-wrap {
@@ -168,18 +168,66 @@
     &.small-icon {
       height: 10px;
       width: 10px;
+
+      &.allowed-icon {
+        background: url("../images/allowed_small.png") center no-repeat;
+      }
+      &.ban-icon {
+        background: url("../images/ban_small.png") center no-repeat;
+      }
+    }
+    &.large-icon {
+      height: 22px;
+      width: 22px;
+
+      &.time_icon {
+        background: url("../images/clock.png") center no-repeat;
+      }
+      &.allowed-icon {
+        background: url("../images/allowed_large.png") center no-repeat;
+      }
+      &.ban-icon {
+        background: url("../images/ban_large.png") center no-repeat;
+      }
+      &.warning-icon {
+        background: url("../images/warning_large.png") center no-repeat;
+      }
+      &.no-comments-icon {
+        background: url("../images/no_comments.png") center no-repeat;
+      }
+      &.delete-icon {
+        background: url("../images/delete_icon.png") center no-repeat;
+
+        &:hover {
+          background: url("../images/delete_hover_icon.png") center no-repeat;
+          cursor: pointer;
+        }
+      }
+      &.comments-icon {
+        background: url("../images/comments_icon.png") center no-repeat;
+        color:#fff;
+        font-size:8px;
+        font-style: normal;
+        text-align: center;
+      }
+
+    }
+    &.right_content-icon {
+      right: 0;
+    }
+    &.center-icon {
+      margin-top: -15px;
+      right: 0;
+      top: 50%;
+    }
+    &.right-icon {
+      right: -30px;
     }
     &.left-icon {
-      left: -16px;
+      left: -30px;
     }
     &.top-icon {
       top:6px;
-    }
-    &.allowed-icon {
-      background: url("../images/allowed_small.png") center no-repeat;
-    }
-    &.ban-icon {
-      background: url("../images/ban_small.png") center no-repeat;
     }
   }
 }
