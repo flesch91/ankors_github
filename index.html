@@ -130,7 +130,7 @@
                             </ul>
                         </div>
                         <ul class="list_items">
-                            <li class="odd">
+                            <li class="odd" data-order_id="0">
                                 <div class="column-1">
                                     <a href="#">Написать анкори для сайта о недвижимости</a>
                                     <span class="label b-blue">Работа</span>
@@ -155,14 +155,16 @@
                                 </div>
                                 <div class="column-8">
                                     <div class="t-center">
-                                        <i class="info-icons act"></i>
+                                        <i class="info-icons act _order_comments_popup"></i>
                                         <i class="star-icons act"></i>
                                         <a href="#" class="start-work">начать работу</a>
                                     </div>
+                                    <div class="popup_wrap">
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
-                            </li>
-                            <li>
+                            </li data->
+                            <li data-order_id="1">
                                 <div class="column-1">
                                     <a href="#">Написать анкори для сайта о недвижимости</a>
                                     <span class="label b-pink">Работа</span>
@@ -187,14 +189,16 @@
                                 </div>
                                 <div class="column-8">
                                     <div class="t-center">
-                                        <i class="info-icons act"></i>
+                                        <i class="info-icons act _order_comments_popup"></i>
                                         <i class="star-icons"></i>
                                         <a href="#" class="start-work">начать работу</a>
+                                    </div>
+                                    <div class="popup_wrap">
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
                             </li>
-                            <li class="odd">
+                            <li class="odd" data-order_id="2">
                                 <div class="column-1">
                                     <a href="#">Написать анкори для сайта о недвижимости</a>
                                     <span class="label b-green">Работа</span>
@@ -231,7 +235,7 @@
                                 </div>
                                 <div class="column-8">
                                     <div class="t-center">
-                                        <i class="info-icons act"></i>
+                                        <i class="info-icons act _order_comments_popup"></i>
                                         <i class="star-icons"></i>
                                         <a href="#" class="start-work">начать работу</a>
                                     </div>
@@ -329,8 +333,6 @@
     <div class="clearfix"></div>
 </div>
 </footer>
-
-
         <script src="javascripts/vendor/jquery-1.9.1.min.js"></script>
         <script src="javascripts/bootstrap-dropdown.js"></script>
         <script src="javascripts/bootstrap-tooltip.js"></script>
@@ -341,5 +343,54 @@
         </script>
         <script src="javascripts/plugins.js"></script>
         <script src="javascripts/main.js"></script>
+
+
+
+
+        <style>
+            .popup_wrap{
+                z-index: 1;
+            }
+        </style>
+        <script src="javascripts/dont_touch/list_orders_page.js"></script>
+        <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+
+        <script id="order_comments_popup_wrap" type="text/x-jquery-tmpl">
+            <div class="arrow-top"></div>
+            <div class="popup_body">
+                <div class="row">
+                    <div class="close"></div>
+                    <div class="span6">
+                        <div class="box-comments">
+                            <i class="count-comments">${comments_count}</i><h3>Комментарии:</h3>
+                            {{if comments_count > 0}}
+                            <ul>
+                                {{each comments}}
+                                <li class="${li_class}">
+                                    <div class="ava-comment" style="background-image: url('${link_avatar_backgroud_image}')"></div>
+                                    <p>
+                                        <span class="user-name">${user_name}: <i class="data" title="${date_normal}">${date_user_frendly}</i></span>
+                                        ${message}
+                                    </p>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                            <form action="#" method="post">
+                                <div class="ava-comment form" style="background-image: url('${link_my_avatar_backgroud_image}')"></div>
+                                <textarea></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="description_order">
+                            <h3>Описание заказа:</h3>
+                            <p>${description}</p>
+                            <a href="${link_start_work}" class="btn-start-work">Начать работу</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
     </body>
 </html>
