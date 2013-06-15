@@ -201,7 +201,7 @@ header{
       position: relative;
       top: 10px;
       border-top: 4px solid #4a84c5;
-      margin-left: 30px;
+      margin-left: 5px;
     }
   }
 }
@@ -244,25 +244,39 @@ header{
       color: #3f4344;
     }
 
-    &.button{
-      background: url("../images/button_repeat_breadcrumb.png") left top repeat-x;
+    &.button,&.button.active{
       height: 40px;
       margin: 0;
 
       a{
         font-family: "casperbold";
-        background: url("../images/button_leftt_breadcrumb.png") left top no-repeat;
+        background: url("../images/button_repeat_breadcrumb.png") left top repeat-x;
         height: 40px;
         display: block;
         font-size: 14px;
         color: #3f4344;
         line-height: 35px;
         text-transform: uppercase;
-        span{
+        border: none;
+        position: relative;
+        padding: 0 17px;
+        margin: 0 20px;
+
+       &:before{
+         background: url("../images/button_leftt_breadcrumb.png") right top no-repeat;
+         content: "";
+         position: absolute;
+         width: 20px;
+         height: 40px;
+         left: -20px;
+       }
+        &:after{
           background: url("../images/button_rightt_breadcrumb.png") right top no-repeat;
+          content: "";
+          position: absolute;
+          width: 20px;
           height: 40px;
-          display: block;
-          padding: 0 37px;
+          right: -20px;
         }
       }
     }
@@ -284,34 +298,45 @@ header{
 .button_dark{
   background: url("../images/button_dark_repeat.png") left top repeat-x;
   height: 40px;
-  font-family: "casperbold";
+  font-family: casperbold;
   font-size: 14px;
   color: #3f4344;
   text-transform: uppercase;
-  line-height: 35px;
+  line-height: 39px;
+  display: inline-block;
+  position: relative;
+  margin: 0 20px;
+
+  &:before{
+    background: url("../images/button_dark_left.png") left top no-repeat;
+    height: 40px;
+    width: 20px;
+    content: "";
+    position: absolute;
+    left: -20px;
+
+  }
+  &:after{
+    background: url("../images/button_dark_right.png") right top no-repeat;
+    height: 40px;
+    width: 20px;
+    content: "";
+    position: absolute;
+    right: -20px;
+  }
 
   &:hover{
     text-decoration: none;
   }
 
-  .button_dark_left{
-    background: url("../images/button_dark_left.png") left top no-repeat;
-    height: 40px;
-    padding: 0 20px;
-  }
-  .button_dark_right{
-    background: url("../images/button_dark_right.png") right top no-repeat;
-    height: 40px;
-  }
-
   /* Active */
   &:active,&.active{
     background: url("../images/button_dark_repeat_active.png") left top repeat-x;
-
-    .button_dark_left{
+    color: #4a84c5;
+    &:before{
       background: url("../images/button_dark_left_active.png") left top no-repeat;
     }
-    .button_dark_right{
+    &:after{
       background: url("../images/button_dark_righ_activet.png") right top no-repeat;
     }
   }
@@ -453,7 +478,13 @@ header{
           background: url("../images/sort_arrow.png") right center no-repeat;
           padding-right: 10px;
         }
+        &.down{
+          span{
+            background: url("../images/sort_down_arrow.png") right center no-repeat;
+          }
+        }
       }
+
     }
     span{
       padding: 0;
@@ -487,7 +518,7 @@ header{
   .column-7{width: 97px}
   .column-8{
     width: 100px;
-    text-align: center;
+    position: relative;
   }
 
   .list_items{
@@ -585,8 +616,19 @@ header{
   @include border-radius(6px);
   @include box-shadow(0 3px 5px rgba(34,71,113,.55), inset 0 1px rgba(255,255,255,.52));
   white-space: normal;
+  position: absolute;
 
-  .arrow-top{}
+  text-align: inherit;
+
+  .arrow-top{
+    background: url("../images/triangle_for_popup.png") left top no-repeat;
+    width: 27px;
+    height: 13px;
+    display: block;
+    position: absolute;
+    margin-top: -32px;
+    right: 50px;
+  }
   .popup_body{position: relative}
 
   /* close */
@@ -622,6 +664,12 @@ header{
     }
   }
 }
+.column-8{
+  .popup_wrap{
+    left: -710px;
+    margin-top: -10px;
+  }
+}
 /* list comments */
 .box-comments{
   .count-comments{
@@ -641,7 +689,10 @@ header{
   }
 
   ul{margin: 0; padding: 0;}
-  ul li{list-style: none}
+  ul li{
+    list-style: none;
+    padding: 0 !important;
+  }
   .my_comment{
     color: #4a84c5;
   }
@@ -703,6 +754,7 @@ footer{
   padding: 0;
 
   li{
+
     list-style: none;
     a{
       font-family: casperregular;
