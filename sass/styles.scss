@@ -73,6 +73,15 @@ $verdana: Verdana, Geneva, sans-serif;
 
 
 .t-center{text-align: center}
+.t-right{text-align: right;}
+
+.seperato{
+  border-top: 2px solid #e5e3e3;
+  @include box-shadow(0 1px rgba(255,255,255,.64));
+  margin-bottom: 15px;
+}
+
+.hidden{display: none}
 
 /*******
   Header
@@ -745,16 +754,53 @@ header{
 *************/
 
 .statistic_wrap{
+  .c-green{color: #00771f;}
+  .c-blue{color: #0075c0;}
+  .c-orang{color: #ff6000;}
+  .c-violet{color: #d300d1;}
+
+  span{font-weight: bold}
+
+
   .all_count{
     font-size: 25px;
     font-family: $verdana;
     color: #3f4344;
     line-height: 20px;
+    margin-bottom: 35px;
+  }
 
-    //span{color: #00771f}
+  table{
+    width: 100%;
+    font-family: $verdana;
+    font-size: 14px;
+    margin-bottom: 15px;
+
+    td{height: 35px}
   }
 }
+.biling_table{
+  .c-green{color: #00771f;}
+  .c-blue{color: #0075c0;}
+  .c-orang{color: #ff6000;}
+  .c-violet{color: #d300d1;}
 
+  .column-1{
+    width: 195px;
+  }
+  .column-2{
+    width: 206px;
+  }
+  .column-3{
+    width: 153px;
+  }
+  .column-4{
+    width: 315px;
+  }
+  .column-5{
+    width: 93px;
+  }
+}
 
 
 
