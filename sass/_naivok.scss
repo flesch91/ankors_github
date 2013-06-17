@@ -334,4 +334,167 @@
 .pill-content > .active {
   display: block;
 }
+.profile {
+  color:#3f4344;
+  font: 12px/15px Verdana, sans-serif;
+  margin-left: 160px;
 
+  h1 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+    margin-bottom: 25px;
+    margin-top: 55px;
+  }
+  .avatar {
+    position: relative;
+    height: 219px;
+    margin: auto;
+    width: 218px;
+
+    .ava-img {
+      background: no-repeat center transparent;
+      height: 219px;
+      width: 218px;
+    }
+    .ava-mask {
+      background: url("../images/avatar_mask.png");
+      height: 219px;
+      position: absolute;
+      left:0;
+      top:0;
+      width: 218px;
+      }
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 14px 0 0;
+
+    &.reviews {
+      margin: 20px 0;
+    }
+
+    .reviews-icon {
+      background: url("../images/reviews-icon.png") 0 0 no-repeat;
+      color:#ededed;
+      height: 19px;
+      font-size: 9px;
+      font-style: normal;
+      display: inline-block;
+      line-height: 14px;
+      margin-right: 5px;
+      vertical-align: text-top;
+      width: 20px;
+    }
+  }
+  .description {
+    color:#747575;
+    margin:8px 0 16px;
+  }
+  .c-green {
+    color:#00a20f;
+  }
+  .c-red {
+    color:#ff3600;
+  }
+  .rating {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 19px;
+    margin-top: 21px;
+
+    .increase {
+      background: url("../images/increase-img.png") 0 0 no-repeat;
+      display: inline-block;
+      height: 22px;
+      margin-left: 10px;
+      margin-top: -2px;
+      vertical-align: middle;
+      width: 21px;
+    }
+    .reduce {
+      background: url("../images/reduce-img.png") 0 0 no-repeat;
+      display: inline-block;
+      height: 22px;
+      margin-left: 5px;
+      margin-top: -2px;
+      vertical-align: middle;
+      width: 21px;
+    }
+  }
+  hr {
+    background: #fbfbfb;
+    border-color:#e5e3e3;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+  }
+  .info {
+    margin-bottom: 5px;
+
+    p {
+      margin: 15px 0;
+      text-align: right;
+
+      b {
+        float: left;
+      }
+    }
+  }
+  .info-rating {
+    margin-top: 30px;
+
+    .title {
+      background: #f2f2f2; /* Old browsers */
+      background: -moz-linear-gradient(top,  #f2f2f2 0%, #dadada 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#dadada)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  #f2f2f2 0%,#dadada 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  #f2f2f2 0%,#dadada 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  #f2f2f2 0%,#dadada 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  #f2f2f2 0%,#dadada 100%); /* W3C */
+      border-radius: 5px;
+      box-shadow: 0 1px 1px rgba(166,166,166,0.68), 0 4px 9px rgba(166,166,166,0.28);
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      padding: 11px;
+      text-shadow: 0 1px #fff;
+      text-transform: uppercase;
+    }
+    ul {
+      background-color: #ededed;
+      border-radius: 5px;
+      box-shadow: 0 1px rgba(79,79,79,0.07) inset, 0 1px 1px rgba(255,255,255,0.68);
+      margin:20px 0 30px;
+      padding: 5px 5px 5px 25px;
+      text-align: left;
+
+      li {
+        padding: 8px 0;
+      }
+    }
+  }
+  .box-comments {
+    background: url("../images/profile-reviews-bg.png") no-repeat 0 0;
+    padding: 10px;
+    text-align: left;
+    
+    p {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+
+    .send-comment {
+      background: #fff;
+      box-shadow: 0 1px rgba(161, 161, 161, 0.55) inset;
+      color: #aaa;
+      font: 14px/16px Verdana, sans-serif;
+      margin-left: 0;
+      margin-top: 15px;
+      min-height: 60px;
+      padding: 5px 0 0 1%;
+      width: 99%;
+    }
+  }
+}
