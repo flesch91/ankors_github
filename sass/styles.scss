@@ -638,6 +638,16 @@ header{
     margin-top: -32px;
     right: 50px;
   }
+  .arrow-left {
+    background: url("../images/left-triangle-comments-popup.png") left top no-repeat;
+    width: 10px;
+    height: 17px;
+    display: block;
+    position: absolute;
+    margin-top: -8px;
+    top:50%;
+    left: -10px;
+  }
   .popup_body{position: relative}
 
   /* close */
@@ -672,6 +682,11 @@ header{
       float: right;
     }
   }
+}
+.comments_popup {
+  left: 100%;
+  top: -100%;
+  z-index: 1;
 }
 .column-8{
   .popup_wrap{

@@ -96,7 +96,7 @@
     <div id="collapseOne" class="accordion-body collapse in">
         <div class="accordion-inner">
             <ul>
-                <li class="icons">Куплю <a href="#">квартиру в Москве</a> за бешенные деньги.<i class="icon large-icon left-icon center-icon delete-icon add-data popuver-hove" data-toggle="popover" data-placement="top" data-content="Отказаться от работы"></i><i class="icon large-icon right_content-icon center-icon allowed-icon"></i><i class="icon large-icon right-icon center-icon no-comments-icon"></i></li>
+                <li class="icons">Куплю <a href="#">квартиру в Москве</a> за бешенные деньги.<span class="icon large-icon left-icon center-icon delete-icon add-data popuver-hove" data-toggle="popover" data-placement="top" data-content="Отказаться от работы"></span><i class="icon large-icon right_content-icon center-icon allowed-icon"></i><i class="icon large-icon right-icon center-icon no-comments-icon add-data popuver-hove" data-toggle="popover" data-placement="top" data-content="Отказаться от работы"></i></li>
                 <li class="edit-form-wrap">
                     <div class="edit-form-inner icons">
                         <form method="post" action="#">
@@ -184,6 +184,57 @@
                         <i class="icon large-icon left-icon center-icon delete-icon add-data popuver-hove" data-toggle="popover" data-placement="top" data-content="Отказаться от работы"></i>
                         <i class="icon large-icon right_content-icon center-icon warning-icon"></i>
                         <i class="icon large-icon right-icon center-icon comments-icon">3</i>
+                        <!-- popup -->
+                        <div class="popup_wrap comments_popup">
+                            <div class="arrow-left"></div>
+
+                            <div class="popup_body">
+                                <div class="row">
+                                    <div class="close"></div>
+                                    <div class="span7">
+                                        <div class="box-comments">
+                                            <i class="count-comments">3</i><h3>Комментарии:</h3>
+                                            <ul>
+                                                <li>
+                                                    <div class="ava-comment" style="background-image: url('images/ava_test.png')"></div>
+                                                    <p>
+                                                        <span class="user-name">Чак Норрис: <i class="data">24.12.2012</i></span>
+                                                        А можно сделать анкоры пушыстей, чтоб было слишно соседей?
+                                                    </p>
+                                                </li>
+                                                <li class="my_comment">
+                                                    <div class="ava-comment" style="background-image: url('images/ava_test_2.png')"></div>
+                                                    <p>
+                                                        <span class="user-name">Я: <i class="data">Вчера</i></span>
+                                                        Если добавить влажности, то получится пафос.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <div class="ava-comment" style="background-image: url('images/ava_test.png')"></div>
+                                                    <p>
+                                                        <span class="user-name">Чак Норрис: <i class="data">3 часа назад</i></span>
+                                                        Ну тогда добавте тепла домашнего и немножко страсти... справитесь?
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <form action="#" method="post">
+                                                <div class="ava-comment form" style="background-image: url('images/ava_test_2.png')"></div>
+                                                <textarea></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-box-wrap">
+                        <div class="error-box icons">
+                            <i class="icon large-icon left-icon center-icon error-icon"></i>
+                            <i class="top-triangle"></i>
+                            <p>Запрещено повторять текст ссылки в окружающем тексте.</p>
+                            <p>Запрещено анкоры с одинаковым текстом ссылки.</p>
+                            <p>Превышено допустимое количество символов в окру- жающем тексте.</p>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -974,14 +1025,14 @@
 <script src="javascripts/bootstrap-tab.js"></script>
 <script type="text/javascript">
     $('.popuver-hover').popover({trigger: 'hover',html: false});
-    $('.popuver-click').popover({trigger: 'click',html: true})
+    $('.popuver-click').popover({trigger: 'click',html: true});
     $('#myCollapsible').collapse({
         toggle: false
-    })
+    });
     $('#myTab a').click(function (e) {
         e.preventDefault();
         $(this).tab('show');
-    })
+    });
 </script>
 <script src="javascripts/plugins.js"></script>
 <script src="javascripts/main.js"></script>
