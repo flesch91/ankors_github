@@ -605,3 +605,56 @@
     }
   }
 }
+
+/* Button Blue */
+.btn-blue {
+  background: url("../images/blue-btn-bg.png") 0 0 repeat-x;
+  color:#141414;
+  display: inline-block;
+  font-family: casperbold,sans-serif;
+  margin-top: 12px;
+  padding: 9px 20px 10px;
+  position: relative;
+
+  &:hover {
+    background: url("../images/blue-btn-bg-hover.png") 0 0 repeat-x;
+    color: #4a84c5;
+    text-decoration: none;
+
+    .left {
+      background: url("../images/blue-btn-left-bg-hover.png") 0 0 no-repeat;
+    }
+    .right {
+      background: url("../images/blue-btn-rigjt-bg-hover.png") 0 0 no-repeat;
+    }
+  }
+  &:active {
+    background: url("../images/blue-btn-bg-active.png") 0 0 repeat-x;
+    color: #4a84c5;
+    text-decoration: none;
+
+    .left {
+      background: url("../images/blue-btn-left-bg-active.png") 0 0 no-repeat;
+    }
+    .right {
+      background: url("../images/blue-btn-rigjt-bg-active.png") 0 0 no-repeat;
+    }
+  }
+
+  .left {
+    background: url("../images/blue-btn-left-bg.png") 0 0 no-repeat;
+    height: 39px;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 20px;
+  }
+  .right {
+    background: url("../images/blue-btn-rigjt-bg.png") 0 0 no-repeat;
+    height: 39px;
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 20px;
+  }
+}

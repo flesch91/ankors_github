@@ -799,6 +799,7 @@ header{
   .c-blue{color: #0075c0;}
   .c-orang{color: #ff6000;}
   .c-violet{color: #d300d1;}
+  .c-gray{color: #909090;}
 
   .column-1{
     width: 195px;
@@ -814,6 +815,9 @@ header{
   }
   .column-5{
     width: 93px;
+  }
+  .list_items li {
+    padding: 15px 10px 15px 20px;
   }
 }
 
