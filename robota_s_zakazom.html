@@ -58,7 +58,12 @@
             </div>
         </div>
         <div class="under_header">
-            <a href="#" class="button_dark pull-left">Заказы</a>
+            <a class="btn-blue pull-left work_with_order">
+                <span class="left"></span>
+                создать Заказ
+                <span class="right"></span>
+            </a>
+            <a href="#" class="button_dark pull-left">мои Заказы</a>
         </div>
         <div class="under_header">
             <div class="pull-right">
@@ -66,17 +71,16 @@
                     <div class="breadcrumb_right">
                         <div class="breadcrumb_left">
                             <ul>
-                                <li class="button"><a href="#">ПРОСМОТР ЗАКАЗА</a></li>
-                                <li class="active"><a href="#">Все (7)</a></li>
-                                <li><a href="#">В процессе (0)</a></li>
-                                <li><a href="#">В обработке (7)</a></li>
-                                <li><a href="#">Виполнено (0)</a></li>
-                                <li><a href="#">Отклонено (0)</a></li>
+                                <li class="button"><a href="#">анкоры заказа</a></li>
+                                <li class="active"><a href="#">Все (35)</a></li>
+                                <li><a href="#">Новые (8)</a></li>
+                                <li><a href="#">В обработке (5)</a></li>
+                                <li><a href="#">Куплено (16)</a></li>
+                                <li><a href="#">Отклоненные (9)</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="button_dark pull-right">мои  анкоры</a>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -86,6 +90,9 @@
 <div class="container">
 <div class="row">
 <div class="span8">
+<div class="t-center light-green-btn-wrapper">
+    <a class="light-green-btn"><i class="pull-right"></i>Експортировать купленые анкоры</a>
+</div>
 <div class="accordion view_orders_listing work_with_order" id="accordion1">
 
 <div class="accordion-heading">
@@ -313,33 +320,10 @@
                                 <div class="close"></div>
                                 <div class="span7">
                                     <div class="box-comments">
-                                        <i class="count-comments">3</i><h3>Комментарии:</h3>
-                                        <ul>
-                                            <li>
-                                                <div class="ava-comment" style="background-image: url('images/ava_test.png')"></div>
-                                                <p>
-                                                    <span class="user-name">Чак Норрис: <i class="data">24.12.2012</i></span>
-                                                    А можно сделать анкоры пушыстей, чтоб было слишно соседей?
-                                                </p>
-                                            </li>
-                                            <li class="my_comment">
-                                                <div class="ava-comment" style="background-image: url('images/ava_test_2.png')"></div>
-                                                <p>
-                                                    <span class="user-name">Я: <i class="data">Вчера</i></span>
-                                                    Если добавить влажности, то получится пафос.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <div class="ava-comment" style="background-image: url('images/ava_test.png')"></div>
-                                                <p>
-                                                    <span class="user-name">Чак Норрис: <i class="data">3 часа назад</i></span>
-                                                    Ну тогда добавте тепла домашнего и немножко страсти... справитесь?
-                                                </p>
-                                            </li>
-                                        </ul>
+                                        <h3>Комментарий:</h3>
                                         <form action="#" method="post">
                                             <div class="ava-comment form" style="background-image: url('images/ava_test_2.png')"></div>
-                                            <textarea></textarea>
+                                            <textarea placeholder="Оставьте Ваш комментарий и нажмите клавишу Enter"></textarea>
                                         </form>
                                     </div>
                                 </div>

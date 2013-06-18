@@ -607,6 +607,7 @@
 .btn-blue {
   background: url("../images/blue-btn-bg.png") 0 0 repeat-x;
   color:#141414;
+  cursor: pointer;
   display: inline-block;
   font-family: casperbold,sans-serif;
   margin-top: 12px;
@@ -655,6 +656,10 @@
     width: 20px;
   }
 }
+.work_with_order.btn-blue {
+  margin: 0 5px 0 0;
+  text-transform: uppercase;
+}
 
 /* Work with order */
 .work_with_order {
@@ -668,5 +673,101 @@
       margin-right: 15px;
       width: 21px;
     }
+
+    .work-buttons {
+      margin: 5px 0;
+
+      a {
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 100%); /* W3C */
+        border-radius: 9px;
+        @include box-shadow(0 1px rgba(165,165,165,.91));
+        font-size: 10px;
+        line-height: 13px;
+        margin: 0 3px;
+        padding: 3px 10px;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:active {
+          @include box-shadow(0 0 1px rgba(160,160,160,.29));
+        }
+      }
+
+      .buy {
+        color: #22a915;
+
+        i {
+          background: url("../images/buy-btn-icon.png") no-repeat 0 0;
+          height: 12px;
+          display: inline-block;
+          margin: 0 5px -4px 0;
+          width: 10px;
+        }
+      }
+      .revision {
+        color: #ff9600;
+
+        i {
+          background: url("../images/revision_btn_icon.png") no-repeat 0 0;
+          height: 12px;
+          display: inline-block;
+          margin: 0 5px -3px 0;
+          width: 13px;
+        }
+      }
+      .decline {
+        color: #f2190c;
+
+        i {
+          background: url("../images/decline_btn_icon.png") no-repeat 0 0;
+          height: 11px;
+          display: inline-block;
+          margin: 0 5px -3px 0;
+          width: 11px;
+        }
+      }
+    }
+  }
+}
+
+/* Light Green btn */
+.light-green-btn-wrapper {
+  padding-right: 55px;
+}
+.light-green-btn {
+  background: #c4febf; /* Old browsers */
+  background: -moz-linear-gradient(top,  #c4febf 0%, #bbf5b6 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c4febf), color-stop(100%,#bbf5b6)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #c4febf 0%,#bbf5b6 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #c4febf 0%,#bbf5b6 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #c4febf 0%,#bbf5b6 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #c4febf 0%,#bbf5b6 100%); /* W3C */
+  border-radius: 17px;
+  @include box-shadow(0 1px rgba(63,163,52,.58));
+  color:#373737;
+  cursor: pointer;
+  display: inline-block;
+  font-family: casperbold,sans-serif;
+  margin: 16px 0 10px;
+  padding: 8px 25px 6px;
+
+  &:hover {
+    color:#373737;
+    text-decoration: none;
+  }
+
+  i {
+    background: url("../images/light_green_btn_top_arrow.png") 0 0 no-repeat;
+    height: 15px;
+    margin: 2px 0 0 15px;
+    width: 10px;
   }
 }
