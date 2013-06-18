@@ -655,3 +655,18 @@
     width: 20px;
   }
 }
+
+/* Work with order */
+.work_with_order {
+  .accordion-body ul li.icons {
+    padding-left: 0;
+
+    .avatar {
+      cursor: pointer;
+      float: left;
+      height: 21px;
+      margin-right: 15px;
+      width: 21px;
+    }
+  }
+}
