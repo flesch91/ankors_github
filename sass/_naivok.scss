@@ -771,3 +771,313 @@
     width: 10px;
   }
 }
+
+/* Settings page */
+.settings {
+  margin-left: 160px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+    margin-bottom: 53px;
+    margin-top: 57px;
+  }
+  h2 {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 26px 0 16px;
+    text-transform: uppercase;
+  }
+  label {
+    font-size: 12px;
+  }
+  input {
+    margin-bottom: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .change-avatar {
+    position: relative;
+    height: 219px;
+    margin: 20px auto 16px;
+    width: 218px;
+
+    .ava-img {
+      background: no-repeat center transparent;
+      height: 219px;
+      width: 218px;
+    }
+    .ava-mask {
+      background: url("../images/change_avatar_mask.png");
+      height: 219px;
+      position: absolute;
+      left:0;
+      top:0;
+      width: 218px;
+    }
+    a {
+      bottom: 38px;
+      color: #fff;
+      left: 54px;
+      position: absolute;
+      text-decoration: underline;
+    }
+  }
+  .desc-edit {
+    margin-left: 227px;
+    text-align: center;
+  }
+  .social {
+    height: 210px;
+    position: relative;
+
+    .avatar-mini {
+      height: 152px;
+      margin: 59px auto 0;
+      position: relative;
+      width: 152px;
+
+      .ava-img {
+        background: no-repeat center / 100% auto transparent;
+        height: 152px;
+        width: 152px;
+      }
+      .ava-mask {
+        background: url("../images/avatar_mask_mini.png");
+        height: 152px;
+        position: absolute;
+        left:0;
+        top:0;
+        width: 152px;
+      }
+    }
+    .user-name {
+      margin-top: 8px;
+    }
+    .line {
+      background: no-repeat 0 0;
+      display: none;
+      position: absolute;
+
+      &.linkedin-line {
+        background-image: url("../images/linkedin-line.png");
+        height: 50px;
+        left: 142px;
+        top: 7px;
+        width: 130px;
+      }
+      &.facebook-line {
+        background-image: url("../images/facebook-line.png");
+        height: 71px;
+        left: 412px;
+        top: -19px;
+        width: 60px;
+      }
+      &.mail-ru-line {
+        background-image: url("../images/mail-ru-line.png");
+        height: 33px;
+        left: 106px;
+        top: 80px;
+        width: 163px;
+      }
+      &.g-pluse-line {
+        background-image: url("../images/g-pluse-line.png");
+        height: 34px;
+        left: 412px;
+        top: 101px;
+        width: 134px;
+      }
+      &.webmoney-line {
+        background-image: url("../images/webmoney-line.png");
+        height: 12px;
+        left: 279px;
+        top: 7px;
+        width: 15px;
+      }
+      &.vk-line {
+        background-image: url("../images/vk-line.png");
+        height: 36px;
+        left: 238px;
+        top: 127px;
+        width: 52px;
+      }
+      &.yandex-line {
+        background-image: url("../images/yandex-line.png");
+        height: 31px;
+        left: 417px;
+        top: 48px;
+        width: 193px;
+      }
+      &.twitter-line {
+        background-image: url("../images/twitter-line.png");
+        height: 49px;
+        left: 397px;
+        top: 126px;
+        width: 67px;
+      }
+    }
+    .icon {
+      background: no-repeat center;
+      border-radius: 50%;
+      display: block;
+      height: 60px;
+      position: absolute;
+      width: 60px;
+
+      &.linkedin {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 123px;
+        top: -21px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+      &.facebook {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 461px;
+        top: -25px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+      &.mail-ru {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 72px;
+        top: 72px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+      &.g-pluse {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 533px;
+        top: 100px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+      &.webmoney {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 229px;
+        top: -37px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+      &.vk {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 186px;
+        top: 121px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+      &.yandex {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 586px;
+        top: 28px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+      &.twitter {
+        background-image: url("../images/twitter-small-icon.png");
+        left: 438px;
+        top: 142px;
+
+        &:hover {
+          background-image: url("../images/twitter-small-icon-hover.png");
+        }
+      }
+    }
+    &.logged-linkedin {
+      .linkedin {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        height: 85px;
+        left: 111px;
+        top: -34px;
+        width: 85px;
+      }
+      .linkedin-line {display: block;}
+    }
+    &.logged-facebook {
+      .facebook {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        left: 446px;
+        top: -38px;
+        height: 85px;
+        width: 85px;
+      }
+      .facebook-line {display: block;}
+    }
+    &.logged-mail-ru {
+      .mail-ru {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        left: 60px;
+        top: 60px;
+        height: 85px;
+        width: 85px;
+      }
+      .mail-ru-line {display: block;}
+    }
+    &.logged-g-pluse {
+      .g-pluse {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        height: 85px;
+        left: 523px;
+        top: 96px;
+        width: 85px;
+      }
+      .g-pluse-line {display: block;}
+    }
+    &.logged-webmoney {
+      .webmoney {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        height: 85px;
+        left: 214px;
+        top: -64px;
+        width: 85px;
+      }
+      .webmoney-line {display: block;}
+    }
+    &.logged-vk {
+      .vk {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        height: 85px;
+        left: 176px;
+        top: 130px;
+        width: 85px;
+      }
+      .vk-line {display: block;}
+    }
+    &.logged-yandex {
+      .yandex {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        height: 85px;
+        left: 562px;
+        top: 1px;
+        width: 85px;
+      }
+      .yandex-line {display: block;}
+    }
+    &.logged-twitter {
+      .twitter {
+        background-image: url("../images/twitter-large-icon.png") !important;
+        height: 85px;
+        left: 438px;
+        top: 142px;
+        width: 85px;
+      }
+      .twitter-line {display: block;}
+    }
+  }
+}
