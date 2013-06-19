@@ -75,12 +75,14 @@ $verdana: Verdana, Geneva, sans-serif;
 .t-center{text-align: center}
 .t-right{text-align: right;}
 
+.m-bottom-35px{margin-bottom: 35px}
+.uppercase_not{text-transform: none !important;}
 .seperato{
   border-top: 2px solid #e5e3e3;
   @include box-shadow(0 1px rgba(255,255,255,.64));
   margin-bottom: 15px;
 }
-
+.c-gray{color: #909090;}
 .hidden{display: none}
 
 /*******
@@ -350,7 +352,83 @@ header{
     }
   }
 }
+.btn-style{
+  background: url("../images/button_dark_repeat.png") left top repeat-x;
+  height: 40px;
+  font-family: casperbold;
+  font-size: 14px;
+  color: #3f4344;
+  text-transform: uppercase;
+  line-height: 39px;
+  display: inline-block;
+  position: relative;
+  margin: 0 20px;
 
+  &:before{
+    background: url("../images/button_dark_left.png") left top no-repeat;
+    height: 40px;
+    width: 20px;
+    content: "";
+    position: absolute;
+    left: -20px;
+
+  }
+  &:after{
+    background: url("../images/button_dark_right.png") right top no-repeat;
+    height: 40px;
+    width: 20px;
+    content: "";
+    position: absolute;
+    right: -20px;
+  }
+
+  &:hover{
+    text-decoration: none;
+  }
+
+  /* Active */
+  &:active,&.active{
+    background: url("../images/button_dark_repeat_active.png") left top repeat-x;
+    color: #4a84c5;
+    &:before{
+      background: url("../images/button_dark_left_active.png") left top no-repeat;
+    }
+    &:after{
+      background: url("../images/button_dark_righ_activet.png") right top no-repeat;
+    }
+  }
+  &.blue{
+    background: url("../images/blue-btn-bg.png") left top repeat-x;
+    color: #373737;
+    &:before{
+      background: url("../images/blue-btn-left-bg.png") left top no-repeat;
+    }
+    &:after{
+      background: url("../images/blue-btn-rigjt-bg.png") right top no-repeat;
+    }
+    /*  hover  */
+    &:hover{
+      background: url("../images/blue-btn-bg-hover.png") left top repeat-x;
+      color: #373737;
+      &:before{
+        background: url("../images/blue-btn-left-bg-hover.png") left top no-repeat;
+      }
+      &:after{
+        background: url("../images/blue-btn-rigjt-bg-hover.png") right top no-repeat;
+      }
+    }
+    &:active,&.active{
+      background: url("../images/blue-btn-bg-active.png") left top repeat-x;
+      color: #373737;
+      &:before{
+        background: url("../images/blue-btn-left-bg-active.png") left top no-repeat;
+      }
+      &:after{
+        background: url("../images/blue-btn-rigjt-bg-active.png") right top no-repeat;
+      }
+    }
+  }
+}
 /**************
   Main content
 **************/
@@ -795,12 +873,18 @@ header{
     td{height: 35px}
   }
 }
+.head_for-p{
+  font-family: $verdana;
+  font-size: 24px;
+  font-weight: normal;
+}
 .biling_table{
   .c-green{color: #00771f;}
   .c-blue{color: #0075c0;}
   .c-orang{color: #ff6000;}
   .c-violet{color: #d300d1;}
   .c-gray{color: #909090;}
+
 
   .column-1{
     width: 195px;
@@ -1040,7 +1124,76 @@ input[type="color"],
     }
   }
 }
+.head_form{
+  text-transform: uppercase;
+  font-family: casperbold;
+  line-height: 38px;
+  margin-bottom: 35px;
+  i{
+    font-family: $verdana;
+    font-style: normal;
+    text-align: center;
+    width: 39px;
+    height: 39px;
+    color: #fefefe;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 15px;
+    @include border-radius(19px 20px 20px 19px);
+    background-color: #7b7b7b;
+    @include box-shadow(0 1px #fff, inset 0 1px 1px rgba(79,79,79,.93));
+  }
+}
+.textarea_style{height: 180px}
 
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus{
+  @include box-shadow(inset 0 1px 1px rgb(230, 168, 43), 0 0 8px rgb(255, 224, 5));
+}
+/************
+  pagination
+************/
+.pagination{
+  ul{margin: 0; padding: 0}
+  ul li{
+    list-style: none;
+    display: inline-block;
+    min-width: 21px;
+    height: 21px;
+  }
+
+  a{
+    font-size: 12px;
+    font-family: $verdana;
+    color: #3e3e3e;
+    display: inline-block;
+    text-decoration: none;
+
+    -webkit-border-radius: 10px 11px 11px 10px;
+    -moz-border-radius: 10px 11px 11px 10px;
+    border-radius: 10px 11px 11px 10px;
+    text-align: center;
+    background-color: #fff;
+    @include box-shadow(0 1px rgba(165,165,165,.91));
+    @include background-image(linear-gradient(bottom, rgba(0,0,0,.05), rgba(255,255,255,.05)));
+  }
+  .last,.first{
+  }
+}
 
 
 
