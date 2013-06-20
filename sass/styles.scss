@@ -75,9 +75,13 @@ $verdana: Verdana, Geneva, sans-serif;
 .t-center{text-align: center}
 .t-right{text-align: right;}
 .t-uppercase {text-transform: uppercase;}
+.p-top-7px{padding-top: 7px}
 
 .m-bottom-35px{margin-bottom: 35px}
+.m-left-65px{margin-left: 65px !important;}
+
 .uppercase_not{text-transform: none !important;}
+
 .seperato{
   border-top: 2px solid #e5e3e3;
   @include box-shadow(0 1px rgba(255,255,255,.64));
@@ -1164,6 +1168,40 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus{
   @include box-shadow(inset 0 1px 1px rgb(230, 168, 43), 0 0 8px rgb(255, 224, 5));
+}
+
+.font-style{
+  font-family: $verdana;
+  color: #7b7b7b;
+
+
+  .f-size-12px{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .first{
+    padding: 0 15px;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+  }
+
+  .center-numer{
+    padding-top: 13px;
+    margin-left: -20px;
+    display: inline-block;
+  }
+  .title{
+    margin-left: -50px;
+    padding: 0;
+  }
+
+  .last{
+    position: relative;
+    right: -10px;
+    padding: 0;
+    top: -20px;
+  }
 }
 /************
   pagination
