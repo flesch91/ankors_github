@@ -534,17 +534,21 @@
       color: #ffa800;
     }
     .column-1 {
-      width: 90px;
+      width: 48px;
     }
     .column-2 {
-      width: 190px;
+      width: 140px;
     }
     .column-3 {
+      width: 115px;
+      text-align: center;
+    }
+    .column-4 {
       text-align: center;
       width: 140px;
     }
-    .column-4 {
-      margin-left: 44px;
+    .column-5 {
+      margin-left: 20px;
       text-align: center;
       width: 180px;
     }
@@ -832,12 +836,13 @@
       top:0;
       width: 218px;
     }
-    a {
+    .links {
       bottom: 38px;
       color: #fff;
       left: 54px;
       position: absolute;
       text-decoration: underline;
+      cursor: pointer;
     }
   }
   .desc-edit {

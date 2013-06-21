@@ -162,7 +162,10 @@
         </div>
         <div class="span6">
             <input type="text" class="span5"  placeholder="www.sample.com"/>
-            <input type="text" class="span1 pull-right"/>
+            <div class="border-for-word pull-right">
+                <input type="text" class="span1"/>
+                <div class="clearfix"></div>
+            </div>
         </div>
     </div>
     <div class="row font-style">
@@ -175,21 +178,55 @@
         </div>
         <div class="span6">
             <input type="text" class="span5"  placeholder="www.sample.com"/>
-            <input type="text" class="span1 pull-right"/>
+            <div class="border-for-word pull-right">
+                <input type="text" class="span1"/>
+                <div class="clearfix"></div>
+            </div>
         </div>
     </div>
     <div class="row font-style">
         <div class="span6">
             <div class="first">3</div>
             <input type="text" class="span5"  placeholder="Введите заголовок заказа"/>
-            <a href="#" class="btn-style blue uppercase_not m-left-65px">импорт</a>
         </div>
         <div class="span1">
             <div class="center-numer">3/14</div>
         </div>
         <div class="span6">
             <input type="text" class="span5"  placeholder="www.sample.com"/>
-            <input type="text" class="span1 pull-right"/>
+            <div class="border-for-word pull-right">
+                <input type="text" class="span1"/>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <a href="#" class="btn-style blue uppercase_not m-left-65px">импорт</a>
+        </div>
+        <div class="span5 offset1">
+            <div class="checkbox-wrap m-top-15px">
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer" data-label="Одинаковая ссылка для всех фраз" name="answer"/>
+            </div>
+        </div>
+        <div class="span1 width-58px m-left-6px p-relative count_ankors m-bottom-35px">
+            <div class="border-for-word bottom pull-right"></div>
+
+            <input type="text" class="span1 m-left-9px"/>
+            <div class="clearfix"></div>
+            <div class="title_count">
+                К-во всех<br>
+                анкоров
+            </div>
+        </div>
+        <div class="span13">
+            <div class="seperato m-bottom-35px"><div class="clearfix"></div></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span13">
+            <div class="head_form"><i>3</i> параметры анкоров</div>
         </div>
     </div>
 </form>
@@ -233,6 +270,7 @@
 <script src="javascripts/bootstrap-tooltip.js"></script>
 <script src="javascripts/bootstrap-popover.js"></script>
 <script src="javascripts/bootstrap-select.min.js"></script>
+<script src="javascripts/prettyCheckable.js"></script>
 
 <script type="text/javascript">
     $(window).on('load', function () {
@@ -240,6 +278,7 @@
     });
     $('.popuver-hover').popover({trigger: 'hover',html: false});
     $('.popuver-click').popover({trigger: 'click',html: true})
+    $('input.checkbox-style').prettyCheckable();
 
 </script>
 <script src="javascripts/plugins.js"></script>

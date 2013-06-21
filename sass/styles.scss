@@ -77,11 +77,15 @@ $verdana: Verdana, Geneva, sans-serif;
 .t-uppercase {text-transform: uppercase;}
 .p-top-7px{padding-top: 7px}
 
-.m-bottom-35px{margin-bottom: 35px}
+.m-not{margin: 0}
+.m-bottom-35px{margin-bottom: 35px !important;}
+.m-left-9px{margin-left: 9px !important;}
 .m-left-65px{margin-left: 65px !important;}
+.m-left-6px{margin-left: 6px;}
 
+.width-58px{width: 58px}
 .uppercase_not{text-transform: none !important;}
-
+.p-relative{position: relative}
 .seperato{
   border-top: 2px solid #e5e3e3;
   @include box-shadow(0 1px rgba(255,255,255,.64));
@@ -446,7 +450,7 @@ header{
   @include box-shadow(0 1px 1px rgba(166,166,166,.68));
   @include background-image(linear-gradient(bottom, rgba(0,0,0,.11), rgba(0,0,0,0)));
 
-  span{
+  span,a{
     text-transform: uppercase;
     font-family: "casperbold";
     font-size: 14px;
@@ -566,12 +570,14 @@ header{
       padding-top: 20px;
 
       &.sort{
-        span{
+        span,a{
           background: url("../images/sort_arrow.png") right center no-repeat;
           padding-right: 10px;
+          text-decoration: none;
+          padding-top: 0;
         }
         &.down{
-          span{
+          span,a{
             background: url("../images/sort_down_arrow.png") right center no-repeat;
           }
         }
@@ -991,7 +997,7 @@ input[type="color"],
   }
   &.btn-group {
     .btn {
-      background-color: white;
+      background: white;
       border: 1px solid #CCCCCC;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
       transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
@@ -1203,6 +1209,35 @@ input[type="color"]:focus,
     top: -20px;
   }
 }
+.border-for-word{
+  background: url("../images/for_input_bg_word.png") center top repeat-y;
+  width: 58px;
+  position: relative;
+
+  .span1{
+    margin-left: 9px;
+  }
+  &.bottom{
+    background: url("../images/for_input_bg_word_bottom.png") center top no-repeat;
+    height: 24px;
+    position: absolute;
+    top: -9px;
+  }
+}
+.count_ankors{
+  input[type="text"]{
+    margin-top: 15px;
+  }
+  .title_count{
+    white-space: nowrap;
+    text-align: center;
+    font-family: $verdana;
+    color: #7b7b7b;
+    font-size: 12px;
+  }
+}
+
+
 /************
   pagination
 ************/
@@ -1234,6 +1269,92 @@ input[type="color"]:focus,
   }
 }
 
+
+/***************
+  Checkbox style
+****************/
+.checkbox-wrap{
+  label{
+    font-family: $verdana;
+    color: #7b7b7b;
+    font-size: 12px;
+  }
+  span{
+    margin-top: -10px;
+    display: inline-table;
+  }
+}
+.prettycheckbox, .prettyradio {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.prettycheckbox a, .prettyradio a {
+  width: 30px;
+  height: 30px;
+  background: url(../images/prettyCheckable-blue.png) top left no-repeat;
+  display: block;
+  float: left;
+  cursor: pointer;
+  margin: 0;
+}
+
+.prettyradio {
+  &.gray a {
+    background-image: url(prettyCheckable-blue.png);
+  }
+  a {
+    background-position: 0 -120px;
+  }
+}
+
+.prettycheckbox a:focus, .prettyradio a:focus {
+  outline: 0 none;
+}
+
+.prettycheckbox a:focus {
+  background-position: 0 -30px;
+}
+
+.prettyradio a:focus {
+  background-position: 0 -150px;
+}
+
+.prettycheckbox a.checked {
+  background-position: 0 -60px;
+}
+
+.prettyradio a.checked {
+  background-position: 0 -180px;
+}
+
+.prettycheckbox a.checked:focus {
+  background-position: 0 -90px;
+}
+
+.prettyradio a.checked:focus {
+  background-position: 0 -210px;
+}
+
+.prettycheckbox label, .prettyradio label {
+  display: block;
+  float: left;
+  margin: 6px 5px;
+  cursor: pointer;
+}
+
+.prettycheckbox.disabled a, .prettyradio.disabled a, .prettycheckbox.disabled label, .prettyradio.disabled label {
+  cursor: not-allowed;
+}
+
+.prettycheckbox.disabled a {
+  background-position: 0 -240px;
+}
+
+.prettyradio.disabled a {
+  background-position: 0 -270px;
+}
 
 
 /*******
