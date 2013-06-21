@@ -1245,6 +1245,27 @@ h1.notification {
       }
     }
   }
+  .video-wrap {
+
+    .video {
+      @include box-shadow(0 7px 7px 0 rgba(255, 151, 9, 0.4));
+      border: solid 12px #fff;
+      border-radius: 10px;
+      height: 177px;
+      margin: 7px auto  45px;
+      position: relative;
+      width: 308px;
+
+      .play-video {
+        background: url("../images/play-video.png");
+        height: 131px;
+        left: 88px;
+        position: absolute;
+        top: 24px;
+        width: 131px;
+      }
+    }
+  }
   .statistic-wrap {
     position: relative;
 
