@@ -80,7 +80,7 @@
                             <input type="text" class="span5" placeholder="Повторите новый пароль"/>
                         </div>
                         <div>
-                            <input type="checkbox" name="test" value="test">показать пароли
+                            <input type="checkbox" class="checkbox-style" value="yes" id="answer" data-label="показать пароли" name="answer"/>
                         </div>
                         <h2>Редактирование профиля:</h2>
                         <div class="seperato"></div>
@@ -134,8 +134,8 @@
                         </div>
                         <h2>Розссылка:</h2>
                         <div class="seperato"></div>
-                        <div>
-                            <input type="checkbox" name="test" value="test" checked>показать пароли
+                        <div class="newsletter">
+                            <input type="checkbox" class="checkbox-style" value="yes" id="answer2" data-label="присилать мне розссылку на:" name="answer" checked/>
                             <input type="text" class="span5" placeholder="sample@sample.com"/>
                         </div>
                         <div class="seperato"></div>
@@ -181,12 +181,14 @@
 <script src="javascripts/bootstrap-dropdown.js"></script>
 <script src="javascripts/bootstrap-tooltip.js"></script>
 <script src="javascripts/bootstrap-popover.js"></script>
+<script src="javascripts/prettyCheckable.js"></script>
 <script type="text/javascript">
     $(window).on('load', function () {
         $('.selectpicker').selectpicker();
     });
     $('.popuver-hover').popover({trigger: 'hover',html: false});
     $('.popuver-click').popover({trigger: 'click',html: true})
+    $('input.checkbox-style').prettyCheckable();
 </script>
 <script src="javascripts/plugins.js"></script>
 <script src="javascripts/main.js"></script>

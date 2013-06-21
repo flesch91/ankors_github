@@ -82,7 +82,7 @@
     <ul class="list_items">
         <li class="odd" data-order_id="0">
             <div class="column-1">
-                <input type="checkbox" name="test" value="test">
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer" name="answer"/>
                 <a class="user_linlk popuver-click avatar" style="background-image: url('images/ava_test.png')" data-toggle="popover" data-placement="top" data-content="
 
                                     <a href='#'>Чак Норрис</a>
@@ -105,7 +105,7 @@
         </li>
         <li data-order_id="1">
             <div class="column-1">
-                <input type="checkbox" name="test" value="test" checked>
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer2"  name="answer" checked/>
                 <a class="user_linlk popuver-click avatar" style="background-image: url('images/ava_test_3.png')" data-toggle="popover" data-placement="top" data-content="
 
                                     <a href='#'>J.A.R.V.I.S.</a>
@@ -128,7 +128,7 @@
         </li>
         <li class="odd" data-order_id="3">
             <div class="column-1">
-                <input type="checkbox" name="test" value="test" checked>
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer3" name="answer" checked/>
                 <a class="user_linlk popuver-click avatar" style="background-image: url('images/ava_test.png')" data-toggle="popover" data-placement="top" data-content="
 
                                     <a href='#'>Hulk</a>
@@ -151,7 +151,7 @@
         </li>
         <li data-order_id="4">
             <div class="column-1">
-                <input type="checkbox" name="test" value="test">
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer4" name="answer"/>
                 <a class="user_linlk popuver-click avatar" style="background-image: url('images/ava_test_2.png')" data-toggle="popover" data-placement="top" data-content="
 
                                     <a href='#'>Why so serious?</a>
@@ -175,7 +175,7 @@
         </li>
         <li class="odd" data-order_id="5">
             <div class="column-1">
-                <input type="checkbox" name="test" value="test">
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer5" name="answer"/>
                 <a class="user_linlk popuver-click avatar" style="background-image: url('images/ava_test.png')" data-toggle="popover" data-placement="top" data-content="
 
                                     <a href='#'>Смайл</a>
@@ -199,7 +199,7 @@
         </li>
         <li data-order_id="6">
             <div class="column-1">
-                <input type="checkbox" name="test" value="test">
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer6" name="answer"/>
                 <a class="user_linlk popuver-click avatar" style="background-image: url('images/ava_test_3.png')" data-toggle="popover" data-placement="top" data-content="
 
                                     <a href='#'>U Happy Design</a>
@@ -223,7 +223,7 @@
         </li>
         <li class="odd" data-order_id="7">
             <div class="column-1">
-                <input type="checkbox" name="test" value="test">
+                <input type="checkbox" class="checkbox-style" value="yes" id="answer7" name="answer" checked/>
                 <a class="user_linlk popuver-click avatar" style="background-image: url('images/ava_test_2.png')" data-toggle="popover" data-placement="top" data-content="
 
                                     <a href='#'>Batman</a>
@@ -304,9 +304,11 @@
 <script src="javascripts/bootstrap-dropdown.js"></script>
 <script src="javascripts/bootstrap-tooltip.js"></script>
 <script src="javascripts/bootstrap-popover.js"></script>
+<script src="javascripts/prettyCheckable.js"></script>
 <script type="text/javascript">
     $('.popuver-hover').popover({trigger: 'hover',html: false});
     $('.popuver-click').popover({trigger: 'click',html: true})
+    $('input.checkbox-style').prettyCheckable();
 </script>
 <script src="javascripts/plugins.js"></script>
 <script src="javascripts/main.js"></script>
