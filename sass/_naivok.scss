@@ -229,6 +229,9 @@
       &.warning-icon {
         background: url("../images/warning_large.png") center no-repeat;
       }
+      &.red-error-icon {
+        background: url("../images/red_revision_btn_icon.png") center no-repeat;
+      }
       &.no-comments-icon {
         background: url("../images/no_comments.png") center no-repeat;
       }
@@ -521,6 +524,12 @@
   margin-left: 160px;
 
   .rating_table {
+    .box_header{
+      .column-2{
+        a{padding-right: 20px}
+      }
+    }
+
     .c-green{
       color: #009d0b;
     }
@@ -535,9 +544,20 @@
     }
     .column-1 {
       width: 48px;
+
+      a{
+        display: inline-block;
+        padding: 0 15px 0 0;
+      }
     }
     .column-2 {
       width: 140px;
+
+      a{
+        padding-left: 0;
+        //padding-right: 20px;
+        display: inline-block;
+      }
     }
     .column-3 {
       width: 115px;
