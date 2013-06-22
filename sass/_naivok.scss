@@ -554,6 +554,7 @@
     }
     .avatar {
       background: center no-repeat;
+      background-size: cover;
       float: left;
       height: 21px;
       margin-right: 10px;
@@ -1125,6 +1126,11 @@ h1.notification {
 .notification_table {
   font-size: 12px;
 
+
+/* checkbox style */
+  .prettycheckbox a, .prettyradio a{
+    float: left;
+  }
   .column-1 {
     width: 240px;
   }

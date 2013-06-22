@@ -437,6 +437,45 @@ header{
       }
     }
   }
+  &.orange{
+    background: url("../images/button_orange_repeat.png") left top repeat-x;
+    color: #373737;
+    height: 45px !important;
+
+    &:before{
+      background: url("../images/button_orange_left.png") left top no-repeat;
+      height: 45px !important;
+    }
+    &:after{
+      background: url("../images/button_orange_right.png") right top no-repeat;
+      height: 45px !important;
+    }
+
+    /*  hover  */
+    &:hover{
+      background: url("../images/button_orange_repeat-hover.png") left top repeat-x;
+      color: #373737;
+
+      &:before{
+        background: url("../images/button_orange_left-hover.png") left top repeat-x;
+    }
+      &:after{
+        background: url("../images/button_orange_right-hover.png") right top no-repeat;
+      }
+    }
+    &:active,&.active{
+      background: url("../images/button_orange_repeat-hover.png") left top repeat-x;
+      color: #373737;
+
+      &:before{
+        background: url("../images/button_orange_left-hover.png") left top repeat-x;
+      }
+      &:after{
+        background: url("../images/button_orange_right-hover.png") right top no-repeat;
+      }
+    }
+  }
+
 }
 /**************
   Main content
@@ -824,6 +863,7 @@ header{
     font-weight: bold;
     display: block;
     font-size: 14px;
+    line-height: 25px;
 
     .data{
       font-family: $verdana;
