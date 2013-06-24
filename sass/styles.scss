@@ -372,6 +372,7 @@ header{
   display: inline-block;
   position: relative;
   margin: 0 20px;
+  border: none;
 
   &:before{
     background: url("../images/button_dark_left.png") left top no-repeat;
@@ -494,7 +495,7 @@ header{
     font-family: "casperbold";
     font-size: 14px;
     color: #3f4344;
-    padding: 20px 20px 0;
+    //padding: 20px 20px 0;
     display: block;
     @include text-shadow(0 1px #fff);
   }
@@ -620,6 +621,19 @@ header{
             background: url("../images/sort_down_arrow.png") right center no-repeat;
           }
         }
+      }
+
+      &.asc a{
+        background: url("../images/sort_arrow.png") right center no-repeat;
+        padding-right: 10px;
+        text-decoration: none;
+        padding-top: 0;
+      }
+      &.desc a{
+        background: url("../images/sort_down_arrow.png") right center no-repeat;
+        padding-right: 10px;
+        text-decoration: none;
+        padding-top: 0;
       }
 
     }
@@ -944,13 +958,10 @@ header{
     width: 206px;
   }
   .column-3{
-    width: 153px;
+    width: 460px;
   }
   .column-4{
-    width: 315px;
-  }
-  .column-5{
-    width: 93px;
+    width: 100px;
   }
   .list_items li {
     padding: 15px 10px 15px 20px;
