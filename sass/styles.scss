@@ -83,7 +83,18 @@ $verdana: Verdana, Geneva, sans-serif;
 .m-left-65px{margin-left: 65px !important;}
 .m-left-6px{margin-left: 6px;}
 
+.m-right-90px{margin-right: 90px !important;}
+
+
 .width-58px{width: 58px}
+.width-210px{
+  width: 210px;
+  display: block;
+}
+.width-173px{width: 173px;}
+.width-131px{width: 131px;}
+.width-429px{width: 429px;}
+
 .uppercase_not{text-transform: none !important;}
 .p-relative{position: relative}
 .seperato{
@@ -438,6 +449,8 @@ header{
       }
     }
   }
+
+
   &.orange{
     background: url("../images/button_orange_repeat.png") left top repeat-x;
     color: #373737;
@@ -474,6 +487,60 @@ header{
       &:after{
         background: url("../images/button_orange_right-hover.png") right top no-repeat;
       }
+    }
+  }
+  /* Orange large */
+  &.orange.large{
+    background: url("../images/button_large_orange_repeat.png") left top repeat-x;
+    color: #373737;
+    height: 60px !important;
+    font-size: 20px;
+    line-height: 58px;
+    text-shadow: 0 1px 0 #ffe59a;
+    margin: 20px 30px 0 30px;
+    @include transition(all .2s ease-in);
+
+    &:before{
+      background: url("../images/button_large_orange_left.png") left top no-repeat;
+      height: 60px !important;
+      left: -30px;
+      width: 30px;
+    }
+    &:after{
+      background: url("../images/button_large_orange_right.png") right top no-repeat;
+      width: 30px;
+      height: 60px !important;
+      right: -30px;
+    }
+    &:hover{
+      @include opacity(80);
+    }
+  }
+  /* Orange large */
+  &.silver.large{
+    background: url("../images/button_large_silver_light_repeat.png") left top repeat-x;
+    color: #373737;
+    height: 60px !important;
+    font-size: 20px;
+    line-height: 58px;
+    text-shadow: 0 1px 0 #ffe59a;
+    margin: 20px 30px 0 30px;
+    @include transition(all .2s ease-in);
+
+    &:before{
+      background: url("../images/button_large_silver_light_left.png") left top no-repeat;
+      height: 60px !important;
+      left: -30px;
+      width: 30px;
+    }
+    &:after{
+      background: url("../images/button_large_silver_light_right.png") right top no-repeat;
+      width: 30px;
+      height: 60px !important;
+      right: -30px;
+    }
+    &:hover{
+      @include opacity(80);
     }
   }
 
@@ -1477,5 +1544,72 @@ footer{
     text-decoration: none;
   }
 }
+
+.settings-ankors-header .box_header{
+  width: 590px;
+  float: right;
+  span{
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  .column-1{
+    width: 165px;
+    span{font-size: 14px !important;}
+  }
+  .column-2{width: 135px;}
+  .column-3{width: 120px;}
+  .column-4{width: 125px;}
+}
+.table_for_order{
+  width: 100%;
+  margin-bottom: 35px;
+
+  tr td{
+    text-align: center;
+    //min-height: 40px;
+  }
+
+  tr td:first-child{
+    text-align: left;
+  }
+}
+.label-top{
+  .checkbox-wrap{
+    position: relative;
+    display: inline-block;
+  }
+  label{
+    width: 18px;
+    position: absolute;
+    top: -15px;
+    color: #7b7b7b;
+  }
+}
+.count-order{
+  font-family: $verdana;
+  font-size: 18px;
+  color: #373737;
+  margin-bottom: 25px;
+
+  input{
+    font-size: 18px;
+    margin: 0 10px;
+  }
+}
+.count-number-order{
+  font-family: $verdana;
+  font-size: 36px;
+  color: #373737;
+
+  .c-orang{color: #ffc000}
+  .c-green{color: #45a201}
+
+  .c-orang,.c-green{
+    font-weight: bold;
+  }
+}
+
 
 @import "naivok";
