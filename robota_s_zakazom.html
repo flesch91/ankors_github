@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/modal-css.css">
     <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -22,6 +23,50 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
+<div id="static" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+    <div class="popup_wrap authorization-popup export">
+        <div class="popup_body">
+            <div class="row">
+                <div class="close" data-dismiss="modal" aria-hidden="true"></div>
+                <div class="title-popup">Експорт анкоров</div>
+                <div class="seperato"></div>
+                <div class="span4 offset1">
+                    <p>Експортировать:</p>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" class="checkbox-style" value="yes" id="text-accept-1" data-label="Новые анкоры" name="answer"/>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" class="checkbox-style" value="yes" id="text-accept-2" data-label="Все анкоры" name="answer"/>
+                    </div>
+                </div>
+                <div class="span4">
+                    <p>В формате:</p>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" class="checkbox-style" value="yes" id="text-accept-3" data-label="MainLink, XAP" name="answer"/>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" class="checkbox-style" value="yes" id="text-accept-4" data-label="SAPE" name="answer"/>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" class="checkbox-style" value="yes" id="text-accept-7" data-label="RAW" name="answer"/>
+                    </div>
+                </div>
+                <div class="span4">
+                    <p>Файл:</p>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" class="checkbox-style" value="yes" id="text-accept-5" data-label="текстовий (.txt)" name="answer"/>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" class="checkbox-style" value="yes" id="text-accept-6" data-label="Excel (.xls)" name="answer"/>
+                    </div>
+                </div>
+                <div class="span13 t-center m-top-45px">
+                    <a href="#" class="btn-style orange">експортировать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="wrap_site">
 <header>
     <div class="container">
@@ -63,9 +108,9 @@
                 создать Заказ
                 <span class="right"></span>
             </a>
+
             <a href="#" class="button_dark pull-left">мои Заказы</a>
-        </div>
-        <div class="under_header">
+
             <div class="pull-right">
                 <div class="breadcrumb">
                     <div class="breadcrumb_right">
@@ -91,7 +136,7 @@
 <div class="row">
 <div class="span8">
 <div class="t-center light-green-btn-wrapper">
-    <a class="light-green-btn"><i class="pull-right"></i>Експортировать купленые анкоры</a>
+    <a class="light-green-btn m-bottom-15px" data-toggle="modal" href="#static"><i class="pull-right"></i>Експортировать купленые анкоры</a>
 </div>
 <div class="accordion view_orders_listing work_with_order" id="accordion1">
 
@@ -957,7 +1002,10 @@
 </div>
 <div class="span8">
     <div class="tabs-wrapper">
-        <h3>Написать анкори для сайта о недвижимости в Москве</h3>
+        <h3>Написать анкори для сайта о недвижимости в Москве
+            <i class="edit-icons"></i>
+            <i class="snow-icons"></i>
+        </h3>
         <ul class="nav nav-tabs">
             <li class="active first"><a href="#orderDescription" data-toggle="tab">Описание заказа</a></li>
             <li><a href="#orderComments" data-toggle="tab">Коментарии к заказу (3)</a></li>
@@ -1071,6 +1119,11 @@
             </div>
         </div>
     </div>
+
+    <p class="collapse" id="viewdetails">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    <p><a class="btn" data-toggle="collapse" data-target="#viewdetails" href="#">View details &raquo;</a></p>
+
+
 </div>
 </div>
 </div>
@@ -1109,6 +1162,7 @@
 </footer>
 
 
+
 <script src="javascripts/vendor/jquery-1.9.1.min.js"></script>
 <script src="javascripts/bootstrap-dropdown.js"></script>
 <script src="javascripts/bootstrap-tooltip.js"></script>
@@ -1117,6 +1171,10 @@
 <script src="javascripts/collaspse-new.js"></script>
 <script src="javascripts/cookies.js"></script>
 <script src="javascripts/bootstrap-tab.js"></script>
+
+<script src="javascripts/prettyCheckable.js"></script>
+<script src="javascripts/bootstrap-modal.js"></script>
+<script src="javascripts/bootstrap-modalmanager.js"></script>
 
 
 <script type="text/javascript">
@@ -1135,6 +1193,15 @@
     $('#myTab a').click(function (e) {
         e.preventDefault();
         $(this).tab('show');
+    });
+
+    $('input.checkbox-style').prettyCheckable();
+
+    $('.row .btn').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $collapse = $this.closest('.collapse-group').find('.collapse');
+        $collapse.collapse('toggle');
     });
 </script>
 <script src="javascripts/plugins.js"></script>

@@ -15,13 +15,53 @@
 
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/modal-css.css">
     <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
+<!-- Popup -->
+<div id="static" class="modal hide fade" tabindex="-1" data-backdrop="static" data-replace="true" data-keyboard="false">
+    <div class="popup_wrap authorization-popup">
+        <div class="popup_body">
+            <div class="row">
+                <div class="close" data-dismiss="modal" aria-hidden="true"></div>
+                <div class="title-popup">Авторизация</div>
+                <div class="seperato"></div>
+                <p class="t-center">авторизируйтесь через email или с помощью профиля соцсети:</p>
+                <br/>
+                <div class="span5 offset2">
+                    <form action="#" method="post">
+                        <label for="email-log">Email:</label>
+                        <input type="email"  id="email-log"/>
 
+                        <label for="pass-log">Пароль:</label>
+                        <input type="password" id="pass-log"/>
+                        <br/>
+                        <a href="#">Забули пароль?</a>
+                        <br/>
+                        <br/>
+                        <a href="#" class="btn-style orange">Ввойти</a>
+                    </form>
+                </div>
+                <div class="span5">
+                    <ul class="authorization-social">
+                        <li><a href="#" class="twitter"></a></li>
+                        <li><a href="#" class="yandex"></a></li>
+                        <li><a href="#" class="vkontakte"></a></li>
+                        <li><a href="#" class="webmoney"></a></li>
+                        <li><a href="#" class="googlepluse"></a></li>
+                        <li><a href="#" class="mail-ru"></a></li>
+                        <li><a href="#" class="facebook"></a></li>
+                        <li><a href="#" class="linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="wrap_site">
     <header>
         <div class="container">
@@ -41,7 +81,7 @@
                 </div>
                 <div class="span4">
                     <div class="pull-right">
-                        <a class="btn-login pull-right" href="#">Войти</a>
+                        <a class="btn-login pull-right" data-toggle="modal" href="#static">Войти</a>
                     </div>
                 </div>
             </div>
@@ -232,8 +272,13 @@
         <div class="clearfix"></div>
     </div>
 </footer>
+
 <script src="javascripts/vendor/jquery-1.9.1.min.js"></script>
 <script src="javascripts/bootstrap-carousel.js"></script>
+<script src="javascripts/bootstrap-transition.js"></script>
+<script src="javascripts/bootstrap-modal.js"></script>
+<script src="javascripts/bootstrap-modalmanager.js"></script>
+
 <script type="text/javascript">
     $('.carousel').carousel()
 </script>

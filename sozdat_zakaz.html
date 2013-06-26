@@ -14,7 +14,9 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/jquery-ui-1.10.3.custom.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
+
     <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -104,12 +106,7 @@
             </select>
         </div>
         <div class="span6 offset1">
-            <label>Выбор меток:</label>
-            <select class="selectpicker span6">
-                <option>Mustard</option>
-                <option>Ketchup</option>
-                <option>Relish</option>
-            </select>
+
         </div>
     </div>
     <div class="row">
@@ -245,17 +242,81 @@
             <table class="table_for_order">
                 <tr>
                     <td class="width-210px">Количество слов</td>
-                    <td class="width-173px">slider</td>
-                    <td>slider</td>
-                    <td>slider</td>
-                    <td>slider</td>
+                    <td class="width-173px">
+                        <div id="ankor_count_all_words" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ankor_count_all_words1" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ankor_count_all_words2" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ankor_count_all_words3" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Количество символов</td>
-                    <td>slider</td>
-                    <td>slider</td>
-                    <td>slider</td>
-                    <td>slider</td>
+                    <td>
+                        <div id="ankor_count_all_words4" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ankor_count_all_words5" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ankor_count_all_words6" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="ankor_count_all_words7" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="1" data-max="150" data-onslide="allwords_slide" data-oncreate="slide_create" aria-disabled="false">
+                            <input class="min" name="Orders[ankor_count_all_words_min]" id="Orders_ankor_count_all_words_min" type="hidden" value="1">
+                            <input class="max" name="Orders[ankor_count_all_words_max]" id="Orders_ankor_count_all_words_max" type="hidden" value="150">
+
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="slider-label">1</span></a>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"><span class="slider-label">150</span></a>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Обязательный текст</td>
@@ -471,6 +532,8 @@
 <script src="javascripts/bootstrap-popover.js"></script>
 <script src="javascripts/bootstrap-select.min.js"></script>
 <script src="javascripts/prettyCheckable.js"></script>
+<script src="javascripts/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="javascripts/order_sliders.js"></script>
 
 <script type="text/javascript">
     $(window).on('load', function () {
