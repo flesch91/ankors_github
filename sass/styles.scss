@@ -1797,6 +1797,28 @@ footer{
   }
 }
 
+/*************
+  Autocomplite
+**************/
+.ui-autocomplete {
+  background: #fff;
+  @include border-radius(4px);
+  @include border-top-radius(0);
+
+  li{
+    a{
+      background: none;
+    }
+    .ui-state-focus{
+      background: $orange;
+      background-image: none;
+      color: #fff;
+      margin: 0 !important;
+    }
+  }
+
+}
+
 
 
 
