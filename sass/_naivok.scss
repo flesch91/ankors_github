@@ -250,6 +250,11 @@
         font-style: normal;
         padding-bottom: 1px;
         text-align: center;
+
+        &.active,&:hover {
+          background: url("../images/hover_comments.png") center no-repeat;
+          color: #000000;
+        }
       }
       &.error-icon {
         background: url("../images/large-error-icon.png") center no-repeat;
@@ -414,6 +419,7 @@
   }
   .description {
     color:#747575;
+    display: inline-block;
     margin:8px 0 16px;
   }
   .c-green {

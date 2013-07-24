@@ -15,13 +15,13 @@
 
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/modal-css.css">
     <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
-
 <div class="wrap_site">
 <header>
     <div class="container">
@@ -61,9 +61,12 @@
             <div class="span16">
                 <div class="under_header">
                     <div class="t-center">
-                        <a href="#" class="button_dark">Пополнить счет</a>
+                        <a data-toggle="modal" href="#deposit" class="button_dark">Пополнить счет</a>
                         <a href="#" class="button_dark active">Мой кошелек</a>
-                        <a href="#" class="button_dark">Вывести Деньги</a>
+                        <a data-toggle="modal" href="#deposit-good" class="button_dark">Поповнено</a>
+                        <a data-toggle="modal" href="#deposit-error" class="button_dark">error</a>
+                        <a data-toggle="modal" href="#message-setting" class="button_dark">Меседж-настройки</a>
+                        <a data-toggle="modal" href="#withdraw_money" class="button_dark">Вывести Деньги</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -278,62 +281,105 @@
 </footer>
 <script src="javascripts/vendor/jquery-1.9.1.min.js"></script>
 <script src="javascripts/bootstrap-dropdown.js"></script>
-<script src="javascripts/bootstrap-tooltip.js"></script>
-<script src="javascripts/bootstrap-popover.js"></script>
-<script type="text/javascript">
-    $('.popuver-hover').popover({trigger: 'hover',html: false});
-    $('.popuver-click').popover({trigger: 'click',html: true})
-</script>
+<script src="javascripts/bootstrap-transition.js"></script>
+<script src="javascripts/bootstrap-modal.js"></script>
+<script src="javascripts/bootstrap-modalmanager.js"></script>
 <script src="javascripts/plugins.js"></script>
 <script src="javascripts/main.js"></script>
+<div id="withdraw_money" class="modal hide fade" tabindex="-1" data-backdrop="withdraw_money" data-replace="true" data-keyboard="false">
+    <div class="popup_wrap authorization-popup">
+        <div class="popup_body">
+            <div class="row">
+                <div class="close" data-dismiss="modal" aria-hidden="true"></div>
+                <div class="title-popup">Вывод денег</div>
+                <div class="seperato"></div>
+                <p class="t-center">Для вывода доступно <b class="c-green">1200</b> руб.</p>
+                <p class="t-center">Введите необходимую сумму:&nbsp;&nbsp;&nbsp;<input type="text" class="modal-input-text span2"/></p>
+                <p class="t-center">Всего, включая комиссию Webmoney (0,8%):</p>
+                <p class="t-center"><b class="c-green f-size-24px">1008</b> руб.</p>
+                <p class="t-center">
+                    <br/>
 
-
-
-
-<style>
-    .popup_wrap{
-        z-index: 1;
-    }
-</style>
-<script src="javascripts/dont_touch/list_orders_page.js"></script>
-<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
-
-<script id="order_comments_popup_wrap" type="text/x-jquery-tmpl">
-    <div class="arrow-top"></div>
-    <div class="popup_body">
-        <div class="row">
-            <div class="close"></div>
-            <div class="span6">
-                <div class="box-comments">
-                    <i class="count-comments">${comments_count}</i><h3>Комментарии:</h3>
-                    {{if comments_count > 0}}
-                    <ul>
-                        {{each comments}}
-                        <li class="${li_class}">
-                            <div class="ava-comment" style="background-image: url('${link_avatar_backgroud_image}')"></div>
-                            <p>
-                                <span class="user-name">${user_name}: <i class="data" title="${date_normal}">${date_user_frendly}</i></span>
-                                ${message}
-                            </p>
-                        </li>
-                        {{/each}}
-                    </ul>
-                    {{/if}}
-                    <form action="#" method="post">
-                        <div class="ava-comment form" style="background-image: url('${link_my_avatar_backgroud_image}')"></div>
-                        <textarea></textarea>
-                    </form>
-                </div>
-            </div>
-            <div class="span6">
-                <div class="description_order">
-                    <h3>Описание заказа:</h3>
-                    <p>${description}</p>
-                    <a href="${link_start_work}" class="btn-start-work">Начать работу</a>
-                </div>
+                    <span class="btn-after">
+                        <input type="submit" class="btn-after" value="вывести">
+                    </span>
+                </p>
             </div>
         </div>
     </div>
-</script>
+</div>
+
+<!-- deposit -->
+<div id="deposit" class="modal hide fade" tabindex="-1" data-backdrop="deposit" data-replace="true" data-keyboard="false">
+    <div class="popup_wrap authorization-popup">
+        <div class="popup_body">
+            <div class="row">
+                <div class="close" data-dismiss="modal" aria-hidden="true"></div>
+                <div class="title-popup">Пополнение счета</div>
+                <div class="seperato"></div>
+               <p class="t-center">Введите необходимую сумму:&nbsp;&nbsp;&nbsp;<input type="text" class="modal-input-text span3"/></p>
+                <p class="t-center">
+                    <br/>
+
+                    <span class="btn-after">
+                        <input type="submit" class="btn-after" value="вывести">
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- deposit good -->
+<div id="deposit-good" class="modal hide fade" tabindex="-1" data-backdrop="deposit-good" data-replace="true" data-keyboard="false">
+    <div class="popup_wrap authorization-popup">
+        <div class="popup_body">
+            <div class="row">
+                <div class="close" data-dismiss="modal" aria-hidden="true"></div>
+                <div class="title-popup">Вас счет пополнен на <b class="c-green">1000</b> рублей</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- deposit error -->
+<div id="deposit-error" class="modal hide fade" tabindex="-1" data-backdrop="deposit-error" data-replace="true" data-keyboard="false">
+    <div class="popup_wrap error-box authorization-popup">
+        <div class="popup_body">
+            <div class="row">
+                <div class="close" data-dismiss="modal" aria-hidden="true"></div>
+                <div class="title-popup">
+                    Во время пополнения произошла ошибка.<br>
+                    Попытайтесь снова
+                </div>
+                <div class="seperato"></div>
+                <p class="t-center">Введите необходимую сумму:&nbsp;&nbsp;&nbsp;<input type="text" class="modal-input-text span3"/></p>
+                <p class="t-center">
+                    <br/>
+                    <span class="btn-after">
+                        <input type="submit" class="btn-after" value="Пополнить">
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- setting popup -->
+<div id="message-setting" class="modal hide fade" tabindex="-1" data-backdrop="message-setting" data-replace="true" data-keyboard="false">
+    <div class="popup_wrap authorization-popup">
+        <div class="popup_body">
+            <div class="row">
+                <p class="t-center">Для вывода необходимо присоединить ваш профиль WebMoney на странице “Настройки”</p>
+                <p class="t-center">
+                    <br/>
+
+                    <span class="btn-after white">
+                        <input type="submit" class="btn-after" value="настройки">
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

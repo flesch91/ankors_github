@@ -138,7 +138,7 @@ $social-layout: horizontal;
 
 .m-right-90px{margin-right: 90px !important;}
 
-
+.f-size-24px{font-size: 24px}
 .width-58px{width: 58px}
 .width-210px{
   width: 210px;
@@ -411,6 +411,9 @@ header{
 
   &:hover{
     text-decoration: none;
+  }
+  &:focus{
+   outline: none;
   }
 
   /* Active */
@@ -992,8 +995,10 @@ header{
   }
 }
 .comments_popup {
-  left: 100%;
-  top: -100%;
+  left: 102%;
+  top: -407%;
+/*  left: 100%;
+  top: -100%;*/
   z-index: 1;
 }
 .column-8{
@@ -1893,6 +1898,72 @@ footer{
   li input:checked + ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
   li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }
 }
+.display-block{display: block !important;}
+.modal{
+  .c-green{color: #009a2f;}
+
+  .error-box{
+    .title-popup{
+      color: #d3183e;
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 15px;
+    }
+    .seperato{
+      border-color: #ffe7eb;
+    }
+  }
+}
+/* Center popup */
+#message-setting.modal.fade.in,
+#withdraw_money.modal.fade.in,
+#deposit-error.modal.fade.in,
+#deposit-good.modal.fade.in,
+#deposit.modal.fade.in{top: 28%}
 
 
+.btn-after{
+  display: inline-block;
+  @include border-radius(20px);
+  background-color: #e49937;
+  @include box-shadow(0 2px 2px rgba(211,104,0,.56));
+  @include background-image(linear-gradient(bottom, rgba(0,0,0,.15), rgba(255,255,255,.15)));
+  input{
+    position: relative;
+    top: -3px;
+    font: 14px;
+    text-transform: uppercase;
+    color: #3f4344;
+    text-shadow: 0 1px 0 #ffdb71;
+    padding: 10px 25px;
+    border: none;
+    @include border-radius(20px);
+    background-color: #ffc900; // Old browsers
+    @include filter-gradient(#ffc900, #ffb700, vertical); // IE6-9
+    @include background-image(linear-gradient(top, #ffc900 0%,#ffb700 100%));
+    @include transition(top 0.05s ease-in);
+  }
+
+  &:active{
+    input{top: 0}
+  }
+
+  &.white{
+    background-color: #e7e7e7;
+    @include box-shadow(0 2px 2px rgba(162,162,162,.57));
+    @include background-image(none);
+
+    input{
+      background-color: #fbfbfb; // Old browsers
+      @include box-shadow(none);
+      @include filter-gradient(#fbfbfb, #f5f5f5, vertical); // IE6-9
+      @include background-image(linear-gradient(top, #fbfbfb 0%,#f5f5f5 100%));
+      text-shadow: 0 1px 0 #e7e7e7;
+    }
+  }
+}
+
+.modal-input-text{
+  font-size: 18px !important;
+}
 @import "naivok";

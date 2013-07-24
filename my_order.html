@@ -303,7 +303,7 @@
                     </div>
 
                     <!-- popup -->
-                    <div class="popup_wrap">
+                    <div class="popup_wrap display-block">
                         <div class="arrow-top"></div>
 
                         <div class="popup_body">
@@ -316,21 +316,34 @@
                                             <li>
                                                 <div class="ava-comment" style="background-image: url('images/ava_test.png')"></div>
                                                 <p>
-                                                    <span class="user-name">Чак Норрис: <i class="data">24.12.2012</i></span>
+
+                                                        <span class="user-name">
+                                                            <a class="popuver-click" data-toggle="popover" data-placement="top" data-content="<a href='#'>Профиль</a><br/>Рейтинг  <a href='#' class='btnp'>+</a> <a href='#' class='btnp'>-</a><br/><a href='#'>Оставить отзыв В чёрный список</a>">
+                                                                Чак Норрис:
+                                                            </a>
+                                                            <i class="data">24.12.2012</i></span>
                                                     А можно сделать анкоры пушыстей, чтоб было слишно соседей?
                                                 </p>
                                             </li>
                                             <li class="my_comment">
                                                 <div class="ava-comment" style="background-image: url('images/ava_test_2.png')"></div>
                                                 <p>
-                                                    <span class="user-name">Я: <i class="data">Вчера</i></span>
+                                                    <span class="user-name">
+                                                        <a class="popuver-click" data-toggle="popover" data-placement="top" data-content="<a href='#'>Профиль</a><br/>Рейтинг  <a href='#' class='btnp'>+</a> <a href='#' class='btnp'>-</a><br/><a href='#'>Оставить отзыв В чёрный список</a>">
+                                                            Я:
+                                                        </a>
+                                                        <i class="data">Вчера</i></span>
                                                     Если добавить влажности, то получится пафос.
                                                 </p>
                                             </li>
                                             <li>
                                                 <div class="ava-comment" style="background-image: url('images/ava_test.png')"></div>
                                                 <p>
-                                                    <span class="user-name">Чак Норрис: <i class="data">3 часа назад</i></span>
+                                                    <span class="user-name">
+                                                        <a class="popuver-click" data-toggle="popover" data-placement="top" data-content="<a href='#'>Профиль</a><br/>Рейтинг  <a href='#' class='btnp'>+</a> <a href='#' class='btnp'>-</a><br/><a href='#'>Оставить отзыв В чёрный список</a>">
+                                                            Чак Норрис:
+                                                        </a>
+                                                        <i class="data">3 часа назад</i></span>
                                                     Ну тогда добавте тепла домашнего и немножко страсти... справитесь?
                                                 </p>
                                             </li>
@@ -416,6 +429,13 @@
 </style>
 <script src="javascripts/dont_touch/list_orders_page.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<script src="javascripts/bootstrap-dropdown.js"></script>
+<script src="javascripts/bootstrap-tooltip.js"></script>
+<script src="javascripts/bootstrap-popover.js"></script>
+<script type="text/javascript">
+    $('.popuver-hover').popover({trigger: 'hover',html: false});
+    $('.popuver-click').popover({trigger: 'click',html: true})
+</script>
 
 <script id="order_comments_popup_wrap" type="text/x-jquery-tmpl">
     <div class="arrow-top"></div>
@@ -431,7 +451,7 @@
                         <li class="${li_class}">
                             <div class="ava-comment" style="background-image: url('${link_avatar_backgroud_image}')"></div>
                             <p>
-                                <span class="user-name">${user_name}: <i class="data" title="${date_normal}">${date_user_frendly}</i></span>
+                                <a href="#" class="popuver-click" data-toggle="popover" data-placement="top" data-content="<a href='#'>Профиль</a><br/>Рейтинг  <a href='#' class='btnp'>+</a> <a href='#' class='btnp'>-</a><br/><a href='#'>Оставить отзыв В чёрный список</a>"><span class="user-name">${user_name}: <i class="data" title="${date_normal}">${date_user_frendly}</i></span></a>
                                 ${message}
                             </p>
                         </li>
