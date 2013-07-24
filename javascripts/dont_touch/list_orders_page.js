@@ -4,7 +4,7 @@ list_orders.orders = {
         comments : [
             {
                 li_class : 'my_comment',
-                link_avatar_backgroud_image : '/html/images/ava_test_2.png',
+                link_avatar_backgroud_image : 'images/ava_test_2.png',
                 message : 'message  1',
                 user_name : 'Я',
                 date_user_frendly : 'date',
@@ -12,7 +12,7 @@ list_orders.orders = {
             },
             {
                 li_class : '',
-                link_avatar_backgroud_image : '/html/images/ava_test.png',
+                link_avatar_backgroud_image : 'images/ava_test.png',
                 message : 'message  1',
                 user_name : 'user 1',
                 date_user_frendly : 'date',
@@ -22,7 +22,7 @@ list_orders.orders = {
         comments_count : 2,
         description : 'Для каждого ключевого слова нужно написать по 3 ссылки. Разбавлять ключи нельзя. Склонять ключевые слова МОЖНО. Не использовать одинаковый окружающий текст для разных анкоров. Кратко о проекте - мы не техцентр и не автосервис, мы портал на котором можно узнать расположение автосервиса, время работы, ремонтные работы, которые проводит автосервис.',
         link_start_work : '',
-        link_my_avatar_backgroud_image : ''
+        link_my_avatar_backgroud_image : 'images/ava_test.png'
     },
     1 : {
         comments : [

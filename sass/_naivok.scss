@@ -1198,10 +1198,16 @@ h1.notification {
   line-height: 52px;
   padding: 0 30px;
   text-transform: uppercase;
+  outline: none;
 
   &:hover {
     color: #000;
     text-decoration: none;
+    outline: none;
+  }
+  &:focus{
+    text-decoration: none;
+    outline: none;
   }
 }
 .home-content {
